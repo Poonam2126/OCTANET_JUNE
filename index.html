@@ -3,53 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasty Delights - Delicious Recipes for Every Occasion</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.js">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Tasty Delights</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#recipes">Recipes</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Welcome to <span class="highlight">Tasty Delights</span></h1>
-            <p>Your ultimate destination for mouth-watering recipes</p>
-            <a href="#recipes" class="btn">Explore Recipes</a>
-        </div>
+        <h1>To-Do List</h1>
     </header>
-
     <main>
-        <section id="recipes" class="recipes">
-            <h2>Popular Recipes</h2>
-            <div class="grid">
-                <div class="recipe">
-                    <img src="pasta.jpeg" alt="Pasta">
-                    <h3>Delicious Pasta</h3>
-                    <p>A perfect pasta recipe for your dinner.</p>
-                </div>
-                <div class="recipe">
-                    <img src="salad.jpg" alt="Salad">
-                    <h3>Fresh Salad</h3>
-                    <p>Healthy and fresh salad to start your meal.</p>
-                </div>
-                <div class="recipe">
-                    <img src="dessert.jpg" alt="Dessert">
-                    <h3>Sweet Dessert</h3>
-                    <p>Indulge in a delightful dessert to satisfy your sweet tooth.</p>
-                </div>
-            </div>
-        </section>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task..." required>
+            <select id="priority-select">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="date" id="due-date">
+            <button type="submit">Add Task</button>
+        </form>
+        <ul id="task-list"></ul>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Tasty Delights. All rights reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
